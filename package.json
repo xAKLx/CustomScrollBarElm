@@ -1,0 +1,21 @@
+{
+  "name": "custom-scroll-bar-elm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "custom-scrollbar": "git+https://github.com/xAKLx/custom-scrollbar.git#0.0.1"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.6.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack src/index.js --mode=production && uglifyjs dist/elm.js --compress \"pure_funcs=[F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9],pure_getters,keep_fargs=false,unsafe_comps,unsafe\" | uglifyjs --mangle --output=dist/elm.min.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
